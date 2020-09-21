@@ -48,7 +48,7 @@ class Header extends Component {
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <NavbarBrand className="mr-auto" href="/">
-                            <img src="assets/images/logo.png" height="30" width="41"
+                            <img src="https://firebasestorage.googleapis.com/v0/b/sade-4349a.appspot.com/o/logo.png?alt=media&token=78b04381-0dbc-43f3-8660-3a62b338390c" height="30" width="41"
                                 alt="Ristorante Con Fusion" />
                         </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>

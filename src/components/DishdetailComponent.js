@@ -16,7 +16,7 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
                             exitTransform: 'scale(0.5) translateY(-50%)'
                         }}>
                         <Card>
-                            <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+                            <CardImg top src={dish.image} alt={dish.name} />
                             <CardImgOverlay>
                                 <Button outline color="primary" onClick={() => favorite ? console.log('Already favorite') : postFavorite(dish._id)}>
                                     {favorite ?
