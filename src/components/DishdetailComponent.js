@@ -18,7 +18,7 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
                         <Card>
                             <CardImg top src={dish.image} alt={dish.name} />
                             <CardImgOverlay>
-                                <Button outline color="primary" onClick={() => favorite ? console.log('Already favorite') : postFavorite(dish._id)}>
+                                <Button outline color="primary" onClick={() => favorite ? console.log('Already favorite') : postFavorite(dish.id)}>
                                     {favorite ?
                                         <span className="fa fa-heart"></span>
                                         : 
@@ -46,7 +46,7 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
                         <Stagger in>
                             {comments.map((comment) => {
                                 return (
-                                    <Fade in key={comment._id}>
+                                    <Fade in key={comment.id}>
                                         <li>
                                         <p>{comment.comment}</p>
                                         <p>{comment.rating} stars</p>
@@ -166,7 +166,7 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
                         <RenderDish dish={props.dish} favorite={props.favorite} postFavorite={props.postFavorite} />
                         <RenderComments comments={props.comments}
                             postComment={props.postComment}
-                            dishId={props.dish._id} />
+                            dishId={props.dish.id} />
                     </div>
                 </div>
             );

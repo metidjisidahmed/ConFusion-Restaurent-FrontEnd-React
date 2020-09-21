@@ -70,17 +70,17 @@ class Main extends Component {
       return(
         this.props.auth.isAuthenticated
         ?
-        <DishDetail dish={this.props.dishes.dishes.filter((dish) => dish._id === match.params.dishId)[0]}
+        <DishDetail dish={this.props.dishes.dishes.filter((dish) => dish.id === match.params.dishId)[0]}
           isLoading={this.props.dishes.isLoading}
           errMess={this.props.dishes.errMess}
           comments={this.props.comments.comments.filter((comment) => comment.dish === match.params.dishId)}
           commentsErrMess={this.props.comments.errMess}
           postComment={this.props.postComment}
-          favorite={this.props.favorites.favorites ?  this.props.favorites.favorites.dishes.some((dish) => {return dish._id === match.params.dishId} ) : null}
+          favorite={this.props.favorites.favorites ?  this.props.favorites.favorites.dishes.some((dish) => {return dish.id === match.params.dishId} ) : null}
           postFavorite={this.props.postFavorite}
           />
         :
-        <DishDetail dish={this.props.dishes.dishes.filter((dish) => dish._id === match.params.dishId)[0]}
+        <DishDetail dish={this.props.dishes.dishes.filter((dish) => dish.id === match.params.dishId)[0]}
           isLoading={this.props.dishes.isLoading}
           errMess={this.props.dishes.errMess}
           comments={this.props.comments.comments.filter((comment) => comment.dish === match.params.dishId)}
