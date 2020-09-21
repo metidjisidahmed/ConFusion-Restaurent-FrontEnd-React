@@ -1,1 +1,1 @@
-export const baseUrl = 'https://metidjisidahmed.github.io/db.json';
+export const baseUrl = 'https://my-json-server.typicode.com/metidjisidahmed/metidjisidahmed.github.io/';
